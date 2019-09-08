@@ -362,6 +362,8 @@ public class FloatingSearchView extends FrameLayout {
 
     private void init(AttributeSet attrs) {
 
+        setInputType(InputType.TYPE_CLASS_NUMBER);
+        
         mHostActivity = Util.getHostActivity(getContext());
 
         LayoutInflater layoutInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -2064,5 +2066,10 @@ public class FloatingSearchView extends FrameLayout {
         public void onMenuClosed() {
             //do nothing
         }
+    }
+    
+    @Override
+    public void setInputType(int t){
+        super.setInputType(t);
     }
 }
